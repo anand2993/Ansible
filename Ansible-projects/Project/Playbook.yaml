@@ -1,0 +1,8 @@
+-
+          name: Install a list of packages with a list variable
+          pip:
+             name: "{{ packages }}"
+          vars:
+            packages:
+            - httpd
+            - httpd-tools

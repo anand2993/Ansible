@@ -1,0 +1,8 @@
+-
+  name: copy file to target system
+  host: WebServer1
+  task:
+     - name: copy file
+       copy:
+         src: /srv/myfiles/foo.conf
+         dest: /etc/foo.conf

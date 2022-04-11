@@ -1,0 +1,12 @@
+  - name: Install Python Flask dependency
+    pip:
+      name: '{{ item }}'
+      state: present
+    with_items:
+      - flask
+      - flask-mysql
+  - name: Copy the source code
+    copy: src=app.py dest=/opt/app.py
+
+  - name: Start web server
+    shell: FLASK_APP=app.py flask run --host=0.0.0.0
